@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班级随机点名</title>
+    <link rel="stylesheet" href="./public/css/animate.min.css">
+    <link rel="stylesheet" href="./public/css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="toolbar">
+            <div class="toolbar-content">
+                <div class="toolbar-title">
+                    <span class="toolbar-title-name"> 嘉 弥 </span>
+                </div>
+                <div class="toolbar-class">
+                    <div class="toolbar-item">
+                        <a href="javascript:void(0);" id="settginBtn">
+                            <i class="bi bi-gear"></i>
+                            设置
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main-card">
+            <div class="main-title">
+                <i class="bi bi-award"></i>
+                班级随机点名
+            </div>
+        </div>
+        <div class="main-card mt-4">
+            <div class="main-name" >
+                <div class="main-name-title">
+                    中奖：
+                    <div class="d-inline-block main-list-dialog" id="main-list-dialog">
+                        <i class="bi bi-list-ul"></i>
+                    </div>
+                </div>
+                <div class="main-name-list" id="main-name-list"></div>
+            </div>
+        </div>
+        <div class="main-card mt-4">
+            <div class="main-name" >
+                <div class="main-name-title">班级列表：</div>
+            </div>
+            <div class="main-table" id="main-table"></div>
+        </div>
+        <div class="main-card mt-4">
+            <div class="main-btns text-center">
+                <button class="begin btn btn-success" id="main-begin-btn">点击开始</button>
+                <select class="time btn btn-outline-info" id="main-time-select">
+                    <option value="100">100毫秒</option>
+                    <option value="200">200毫秒</option>
+                    <option value="500">500毫秒</option>
+                    <option value="1000">1秒</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-author"> ©2022 By Sylvie233 </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="selModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">中奖人：</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-name">
+                        <i class="bi bi-caret-right"></i>
+                        <div id="modal-name" class="d-inline-block animate__animated animate__wobble"></div>
+                        <i class="bi bi-caret-left"></i>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="nameListModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">中奖人名单：</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="nameList" cols="30" rows="10"></textarea>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="settginsModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">设置：</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">抽奖持续时间(毫秒):</label>
+                        <input type="text" class="form-control" id="duratineTimeSet">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" id="setDialogSave" class="btn btn-success" data-dismiss="modal">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./public/js/jquery-3.3.1.js"></script>
+<script src="./public/js/bootstrap.js"></script>
+<script src="./config.js"></script>
+<script src="./public/js/core.js"></script>
+
+</html>

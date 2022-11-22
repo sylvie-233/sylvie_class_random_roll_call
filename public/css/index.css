@@ -1,0 +1,292 @@
+@font-face {
+    font-family: "Sylvie233";
+    src: url("../font/华康少女文字简W5.ttc");
+}
+
+:root {
+    --animation-iteration-count: infinite;
+    --animate-duration: 1500ms;   
+    --animate-repeat: 10;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(90deg,rgba(247,149,51,.1),rgba(243,112,85,.1) 15%,rgba(239,78,123,.1) 30%,rgba(161,102,171,.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7,179,155,.1) 86%,rgba(109,186,130,.1));
+    cursor: url(../assets/default.cur),default;
+    font-family: "Sylvie233";
+}
+
+a, a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #49b1f5;
+    background-image: -webkit-linear-gradient(45deg,hsla(0,0%,100%,.4) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.4) 0,hsla(0,0%,100%,.4) 75%,transparent 0,transparent);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(73,177,245,.2);
+    border-radius: 2em;
+}
+
+.header {
+    height: 60px;
+    margin-top: 0px;
+    transform: translateY(0px);
+    left: 0px;
+    right: 0px;
+    background: hsla(0,0%,100%,1)!important;
+    border-radius: 0;
+    border-color: #fff;
+    color: rgba(0,0,0,.87);
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    transition: all .5s;
+    box-shadow: 0 4px 8px 6px rgba(7,17,27,.06)!important;
+    display: block;
+    flex: 1 1 auto;
+    max-width: 100%;
+}
+
+.header .toolbar {
+    padding: 10px 36px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.header .toolbar .toolbar-content {
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+}
+
+.header .toolbar .toolbar-content .toolbar-title {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    float: left;
+    color: #4c4948!important;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header .toolbar .toolbar-content .toolbar-class {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    float: right;
+}
+
+.header .toolbar .toolbar-content .toolbar-class .toolbar-item {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 0 0.875rem;
+    color: #4c4948!important;
+}
+
+.header .toolbar .toolbar-content .toolbar-class .toolbar-item i {
+    margin-right: 4px;
+}
+
+.main {
+    margin: 40px auto;
+    margin-top: 80px;
+    margin-bottom: 120px;
+    width: 80%;
+}
+
+.main .main-card {
+    border-radius: 8px;
+    background: #fff;
+    color: #4c4948;
+    box-shadow: 0 4px 8px 6px rgba(7,17,27,.06)!important;
+    border-color: #fff;
+    border-width: thin;
+    display: block;
+    max-width: 100%;
+    outline: none;
+    text-decoration: none;
+    transition-property: box-shadow,opacity;
+    transition: all .3s;
+    overflow-wrap: break-word;
+    position: relative;
+    white-space: normal;
+}
+
+.main .main-title {
+    padding: 10px 20px;
+    font-size: 28px;
+}
+
+.main .main-name {
+    padding: 10px 20px;
+    font-size: 22px;
+}
+
+.main .main-name-title {
+    padding: 10px 20px;
+    font-size: 22px;
+    border-bottom: 1px solid rgba(114, 107, 107, 0.373);
+}
+
+.main-name .main-name-list {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.main-table {
+    padding: 40px;
+}
+
+.main-table .main-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-table .main-col {
+    overflow: hidden;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 1;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    font-size: large;
+    background: rgba(0, 183, 255, 0.155);
+    border-radius: 4px;
+    border: 1px solid rgba(114, 107, 107, 0.373);
+    transition: transform .3s;
+}
+
+.main-table .main-col:hover {
+    transform: translateX(5px) translateY(5px) scale(1.2);
+    background-image: linear-gradient( 135deg, #2AFADF 10%, #4C83FF 100%);
+}
+
+.main-table .main-col.main-col-empty {
+    background-color: #fff;
+    visibility: hidden;
+}
+
+.main-table .main-col.main-col-active {
+    background-image: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+}
+.main-table .main-col.main-col-actived {
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
+}
+
+.main-btns {
+    padding: 20px 40px;
+}
+
+.footer {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 14%), 0 0 0 0 rgb(0 0 0 / 12%);
+    width: 100%;
+    border-radius: 0;
+    background-color: #f5f5f5;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto!important;
+    flex-wrap: wrap;
+    position: relative;
+    transition-duration: .2s;
+    transition-property: background-color,left,right;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes Gradient-data {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.footer .footer-content {
+    width: 100%;
+    line-height: 2;
+    position: relative;
+    padding: 40px 20px;
+    color: #eee;
+    font-size: 14px;
+    text-align: center;
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 34%, #2BFF88 60%, #cfdf5e 100%);
+    background-size: 400% 400%;
+    animation: Gradient-data 10s ease infinite;
+}
+
+
+.sel-name {
+    font-size: 14px;
+    margin: 10px 10px;
+}
+
+.modal .modal-name {
+    font-size: 22px;
+    text-align: center;
+}
+
+.modal .modal-dialog-centered {
+    margin-top: -100px;
+}
+
+#modal-name {
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+#main-list-dialog {
+    float: right;
+    cursor: pointer;
+}
+
+#nameList {
+    width: 100%;
+    padding: 10px 15px;
+    overflow-y: scroll;
+    resize: none;
+    border: 1px solid rgba(114, 107, 107, 0.373);
+    border-radius: 6px;
+    color: rgba(255, 0, 0, 0.564);;
+}
